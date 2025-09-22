@@ -1,7 +1,7 @@
 {
     "username": "postgres",
-    "password": "joyce1515",
-    "host": "canaisdb.cgzms24m6hcd.us-east-1.rds.amazonaws.com",
+    "password": "secret",
+    "host": "seu host aqui",
     "port": 5432,
     "dbname": "postgres"
 }

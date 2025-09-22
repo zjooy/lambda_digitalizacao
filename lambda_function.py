@@ -10,7 +10,7 @@ sqs = boto3.client('sqs')
 textract = boto3.client('textract')
 
 # Configurações
-QUEUE_URL = 'https://sqs.us-east-1.amazonaws.com/890742590334/fila-reclamacoes-dev'
+QUEUE_URL = 'https://sqs.us-east-1.amazonaws.com/123456/fila-reclamacoes-dev'
 
 def lambda_handler(event, context):
     try:
@@ -155,7 +155,7 @@ def mover_arquivo(bucket, key, sucesso=True):
 def enviar_para_fila_de_falha(arquivo, erro):
     print(f"Enviando para fila de falha: {id}, {arquivo}, {erro}")
     sqs.send_message(
-        QueueUrl='https://sqs.us-east-1.amazonaws.com/890742590334/fila-reclamacoes-digitalizacao-falhas',
+        QueueUrl='https://sqs.us-east-1.amazonaws.com/12344455/fila-reclamacoes-digitalizacao-falhas',
         MessageBody=json.dumps({
             "Arquivo": arquivo,
             "Erro": erro
